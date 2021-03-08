@@ -1,18 +1,14 @@
 import React from 'react';
-import CharacterCounter from './CharacterCounter'
+import TodoList from './pages/TodoList'
 import {
   RecoilRoot,
-  atom,
-  seletor,
-  useRecoilState,
-  useRecoilValue
 } from 'recoil'
 
 
 function App() {
   return (
     <RecoilRoot>
-      <CharacterCounter/>
+      <TodoList/>
     </RecoilRoot>
   );
 }
