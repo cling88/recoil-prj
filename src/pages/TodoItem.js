@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import { todoListState } from '../recoils/TodoListRecoil'
 import { useRecoilState } from 'recoil'
@@ -6,10 +6,6 @@ import { useRecoilState } from 'recoil'
 function TodoItem({item}) {
     const [todoList, setTodoList] = useRecoilState(todoListState);
     const index = todoList.findIndex((listItem) => listItem === item);
-    useEffect(() => {
-        console.log(">> item: ", item);
-    }, [])
-
     const editItemText = ({target: {value}}) => {
         const newList = replaceItemAtIndex(todoList, index, {
             ...item,
